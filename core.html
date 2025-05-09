@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Core Philosophy Mindmap - Explore philosophical concepts and ideas">
+    <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+    <title>Core Philosophy Mindmap</title>
+    <link rel="stylesheet" href="core_style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="controls">
+                <label class="toggle" title="Toggle dark/light mode">
+                    <input type="checkbox" id="theme-toggle">
+                    <span>Dark Mode</span>
+                </label>
+                <div id="date-display" aria-label="Current date"></div>
+                <div id="time-display" aria-label="Current time"></div>
+            </div>
+        </div>
+        <div class="header-right">
+            <h1>CORE PHILOSOPHY MINDMAP</h1>
+        </div>
+    </header>
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search concepts..." aria-label="Search philosophical concepts">
+    </div>
+    <div class="quote-container" role="complementary">
+        <p id="quote" class="quote"></p>
+    </div>
+    <main>
+        <section id="philosophy-content" aria-label="Philosophical concepts">
+            <!-- Content populated by core_philosophy.js -->
+        </section>
+    </main>
+    <footer>
+        <p>CPM <span id="version-display">v2.0</span></p>
+        <p class="footer-note">Explore philosophical concepts and ideas</p>
+    </footer>
+    <script src="core_philosophy.js"></script>
+    <script src="core_logger.js"></script>
+    <script src="core_ui.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93a92b32fc25dd25',t:'MTc0NjM3Mzk4My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

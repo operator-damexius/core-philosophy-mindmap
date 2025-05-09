@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap');
+
+body, body * {
+    text-transform: uppercase !important;
+    font-family: 'Source Code Pro', monospace !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px; /* Matches footer height (padding + border) */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.light {
+    background-color: #fafafa;
+    color: #000000;
+}
+
+body.dark {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid;
+    flex-wrap: wrap;
+    transition: border-color 0.3s ease;
+}
+
+body.light header {
+    border-bottom: 1px solid #000000;
+}
+
+body.dark header {
+    border-bottom: 1px solid #ffffff;
+}
+
+.header-left, .header-right {
+    flex: 1;
+    min-width: 200px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.header-right {
+    text-align: right;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ff0000;
+}
+
+.quote-container {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+body.light .quote-container {
+    border: 1px solid #000000;
+}
+
+body.dark .quote-container {
+    border: 1px solid #ffffff;
+}
+
+.quote-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+    opacity: 1;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #ff0000;
+    margin: 0;
+}
+
+.quote.fade {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid;
+    padding: 2px 5px; /* Adjusted to fit content height and width */
+    font-size: 0.9em; /* Standardized font size */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+body.light .toggle {
+    border: 1px solid #000000;
+}
+
+body.dark .toggle {
+    border: 1px solid #ffffff;
+}
+
+.toggle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#date-display, #time-display {
+    font-size: 0.9em; /* Standardized font size */
+    padding: 2px 5px; /* Adjusted to fit content height and width */
+    border: 1px solid;
+    transition: all 0.3s ease;
+}
+
+body.light #date-display,
+body.light #time-display {
+    border: 1px solid #000000;
+}
+
+body.dark #date-display,
+body.dark #time-display {
+    border: 1px solid #ffffff;
+}
+
+.search-container {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+#search-bar {
+    padding: 8px;
+    width: 300px; /* Wider for better usability */
+    border: 1px solid;
+    background-color: inherit;
+    color: inherit;
+    font-size: 0.9em;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+body.light #search-bar {
+    border: 1px solid #000000;
+}
+
+body.dark #search-bar {
+    border: 1px solid #ffffff;
+}
+
+#search-bar:focus {
+    transform: scale(1.02);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.philosophy-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 3px solid #ff0000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: translateX(0);
+}
+
+body.dark .philosophy-item {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+body.light .philosophy-item {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.philosophy-item:hover {
+    transform: translateX(5px) scale(1.01);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.philosophy-term {
+    font-size: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.philosophy-description {
+    font-size: 0.95em;
+    line-height: 1.4;
+    color: inherit;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.philosophy-meaning {
+    font-style: italic;
+    color: #666;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px dashed;
+    font-size: 0.9em;
+    line-height: 1.4;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+body.dark .philosophy-meaning {
+    color: #bbb;
+    border-top: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+body.light .philosophy-meaning {
+    border-top: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+#philosophy-content {
+    padding: 20px;
+    margin-bottom: 90px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #ff0000;
+    z-index: 1000;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+body.light footer {
+    background-color: #ffffff;
+    border-top: 1px solid #000000;
+}
+
+body.dark footer {
+    background-color: #000000;
+    border-top: 1px solid #ffffff;
+}
+
+footer a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: #ff0000;
+}
+
+footer a:active {
+    color: #ff0000;
+}
+
+#version-display {
+    margin-left: auto; /* Pushes version to the right */
+    color: #ff0000;
+}
+
+body.light #version-display {
+    color: #ff0000;
+}
+
+body.dark #version-display {
+    color: #ff0000;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 50px; /* Adjust for smaller footer height */
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-right {
+        margin-top: 10px;
+    }
+    .header-left {
+        justify-content: center;
+    }
+    #search-bar {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px;
+    }
+    .controls {
+        justify-content: center;
+    }
+    .philosophy-item {
+        padding: 12px;
+        margin-bottom: 15px;
+        transition: all 0.2s ease;
+    }
+    .philosophy-item:hover {
+        transform: translateX(3px) scale(1.005);
+    }
+    #date-display, #time-display {
+        font-size: 0.8em; /* Smaller font on small screens */
+        padding: 2px 5px; /* Adjusted for smaller screens */
+    }
+    header h1 {
+        font-size: 1.2em;
+    }
+    footer {
+        padding: 10px;
+        font-size: 0.8em;
+        flex-direction: column;
+        text-align: center;
+    }
+    .toggle {
+        font-size: 0.8em; /* Smaller font on small screens */
+        padding: 2px 5px; /* Consistent with other elements */
+    }
+    #version-display {
+        margin-left: 0; /* Reset margin on small screens for centered layout */
+        margin-top: 5px; /* Add spacing below author on small screens */
+    }
+    .philosophy-term {
+        font-size: 1.1em;
+    }
+    .philosophy-description {
+        font-size: 0.9em;
+    }
+    .philosophy-meaning {
+        font-size: 0.85em;
+    }
+    #search-bar:focus {
+        transform: scale(1.01);
+    }
+    .toggle:hover {
+        transform: scale(1.03);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .header-left {
+        flex: 0 0 60%;
+    }
+    .header-right {
+        flex: 0 0 30%;
+    }
+    #search-bar {
+        width: 250px; /* Slightly narrower on medium screens */
+    }
+    .philosophy-item {
+        padding: 15px;
+    }
+    #philosophy-content {
+        padding: 15px;
+    }
+}
