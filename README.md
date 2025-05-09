@@ -2,6 +2,10 @@
 
 A modern, interactive web application for exploring philosophical concepts, ideas, and quotes through an intuitive mindmap interface. Built with pure HTML, CSS, and JavaScript.
 
+## Live Demo
+
+Visit the live application: [Core Philosophy Mindmap](https://operator-damexius.github.io/core-philosophy-mindmap/)
+
 ## Features
 
 - **Interactive Philosophy Mindmap**: Explore philosophical concepts through an intuitive visual interface
