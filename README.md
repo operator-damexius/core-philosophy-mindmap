@@ -28,6 +28,8 @@ git clone https://github.com/yourusername/core-philosophy-mindmap.git
 
 2. Open `core.html` in your web browser
 
+3. Link ```https://github.com/operator-damexius/core-philosophy-mindmap/tree/main```
+
 ## Project Structure
 
 ```
