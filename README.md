@@ -1,3 +1,4 @@
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/operator-damexius/core-philosophy-mindmap)
 # Core Philosophy Mindmap
 
 A modern, interactive web application for exploring philosophical concepts, ideas, and quotes through an intuitive mindmap interface. Built with pure HTML, CSS, and JavaScript.
